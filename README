@@ -1,0 +1,13 @@
+# Tuesday Cubs — Ennis
+
+This is the responsive parent information site for Tuesday Cubs in Ennis, hosted on GitHub Pages.
+
+## Updating the calendar
+
+The schedule in `assets/calendar.json` drives the on-page month view. After changing dates, meeting times, locations or descriptions there, regenerate the subscription feed:
+
+```sh
+python3 scripts/generate_calendar_ics.py
+```
+
+Commit both `assets/calendar.json` and `assets/ennis-tuesday-cubs.ics`. The feed URL stays the same, so families who subscribe by URL can receive schedule changes from their calendar app.

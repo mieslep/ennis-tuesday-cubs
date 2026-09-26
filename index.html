@@ -49,34 +49,59 @@
           </div>
         </div>
 
-        <div class="calendar-layout">
-          <div class="calendar-download-card">
-            <span class="calendar-doodle" aria-hidden="true">🗓️</span>
-            <p class="calendar-card-label">One page · ready for the fridge</p>
-            <h3>Download &amp; print</h3>
-            <p>Get the full 2026–27 calendar as a PDF, with weekly meetings, no-meeting nights and special events.</p>
-            <a class="button calendar-button" href="assets/Tuesday%20Night%20Cub%20Calendar%202026-7.pdf" download>
-              Download the calendar <span aria-hidden="true">↓</span>
-            </a>
+        <div class="calendar-card">
+          <div class="calendar-toolbar">
+            <div class="month-navigation" aria-label="Change calendar month">
+              <button class="month-nav-button" type="button" id="previous-month" aria-label="Previous month">‹</button>
+              <h3 id="month-title" aria-live="polite">Loading calendar…</h3>
+              <button class="month-nav-button" type="button" id="next-month" aria-label="Next month">›</button>
+            </div>
+            <div class="calendar-actions">
+              <a class="button calendar-button" href="assets/Tuesday%20Night%20Cub%20Calendar%202026-7.pdf" target="_blank" rel="noopener noreferrer">Print calendar (PDF) <span aria-hidden="true">⎙</span></a>
+              <details class="calendar-add-menu" id="calendar-add-menu">
+                <summary class="button calendar-button">Add to my calendar <span aria-hidden="true">＋</span></summary>
+                <div class="calendar-add-panel">
+                  <p class="calendar-add-heading">Set up these dates on your device</p>
+                  <label class="calendar-platform-picker" for="calendar-platform">
+                    <span>I’m using</span>
+                    <select id="calendar-platform" disabled>
+                      <option value="auto">This device</option>
+                      <option value="iphone">iPhone or iPad</option>
+                      <option value="android">Android</option>
+                      <option value="mac">Mac</option>
+                      <option value="windows">Windows</option>
+                      <option value="linux">Linux</option>
+                      <option value="google">Google Calendar</option>
+                      <option value="outlook">Outlook</option>
+                    </select>
+                  </label>
+                  <div class="calendar-platform-help" id="calendar-platform-help" aria-live="polite">
+                    <p>Loading calendar options…</p>
+                  </div>
+                  <div class="calendar-download-choice">
+                    <a href="assets/ennis-tuesday-cubs.ics" download>Download a one-time calendar copy (.ics)</a>
+                    <small>This is a snapshot; subscribe instead to receive later date changes.</small>
+                  </div>
+                  <span class="copy-feed-status" id="calendar-copy-status" aria-live="polite"></span>
+                </div>
+              </details>
+            </div>
           </div>
 
-          <aside class="dates-panel" aria-labelledby="dates-title">
-            <p class="eyebrow eyebrow-dark">Key dates</p>
-            <h3 id="dates-title">Save these dates!</h3>
-            <ul class="event-list">
-              <li><time datetime="2026-11-07">7–8 Nov</time><span>Indoor Overnight <small>Scout Hall</small></span></li>
-              <li><time datetime="2026-11-22">22 Nov</time><span>Masterchef Competition <small>Ennis Scout Hall · selected Cubs</small></span></li>
-              <li><time datetime="2027-01-30">30–31 Jan</time><span>Ruan Overnight <small>Ruan Scout Camp</small></span></li>
-              <li><time datetime="2027-02-07">7 Feb</time><span>County Cub Hike <small>Location to be confirmed</small></span></li>
-              <li><time datetime="2027-03-17">17 Mar</time><span>St Patrick’s Day Parade</span></li>
-              <li><time datetime="2027-04-17">17–18 Apr</time><span>Cub Challenge <small>Ruan Scout Camp</small></span></li>
-              <li><time datetime="2027-05-09">9 May</time><span>Hike <small>Lough Avalla</small></span></li>
-              <li><time datetime="2027-05-22">22–23 May</time><span>County Cub Day &amp; Overnight <small>Ruan Scout Camp</small></span></li>
-              <li><time datetime="2027-06-04">4–7 Jun</time><span>JamÓige <small>National Cub Event · Pallaskenry</small></span></li>
-            </ul>
-            <p class="dates-note">The calendar also has Sixer and Seconder events and any changes to the weekly meeting.</p>
-          </aside>
+          <div class="calendar-legend" aria-label="Calendar key">
+            <span class="legend-meeting">Cubs meet</span>
+            <span class="legend-event">Special event</span>
+            <span class="legend-review">Review and planning</span>
+            <span class="legend-sixer">Sixer / Seconder</span>
+            <span class="legend-no-meeting">No meeting</span>
+          </div>
+
+          <div class="month-grid" id="month-grid" role="region" aria-labelledby="month-title">
+            <p class="calendar-loading">Loading the trail map…</p>
+          </div>
+          <p class="calendar-note">Tuesday meetings are 6:30–8:00 pm unless the calendar says otherwise. Dates may change as the year goes on.</p>
         </div>
+        <noscript><p class="calendar-error">Turn on JavaScript to use the month view. You can still <a href="assets/Tuesday%20Night%20Cub%20Calendar%202026-7.pdf">open the calendar PDF</a>.</p></noscript>
 
       </section>
 
@@ -86,31 +111,43 @@
             <p class="eyebrow eyebrow-dark">A Cub’s personal journey</p>
             <h2 id="badges-title">Badges, skills &amp; awards<span class="heading-period">!</span></h2>
           </div>
-          <p class="section-intro">Three ways to try things, learn by doing and celebrate progress.</p>
+          <p class="section-intro">Four ways to try things, learn by doing and celebrate progress.</p>
         </div>
         <div class="badge-grid">
           <article class="badge-card badge-journey">
-            <span class="badge-doodle" aria-hidden="true">🧭</span>
+            <div class="badge-art badge-art-stages" aria-hidden="true">
+              <img src="assets/personal-progress-turas.png" alt="">
+              <img src="assets/personal-progress-taisteal.png" alt="">
+              <img src="assets/personal-progress-tagann.png" alt="">
+            </div>
             <p class="badge-label">The Cub journey</p>
             <h3>Personal Progress</h3>
-            <p class="badge-description">Stage badges celebrate the adventures and challenges Cubs take on as they grow. The Chief Scout Award is a further challenge for Cubs in their final year.</p>
+            <p class="badge-description">Stage badges celebrate the adventures and challenges Cubs take on as they grow.</p>
             <button class="open-dialog" type="button" data-dialog="journey-dialog">Our parent explainer <span aria-hidden="true">→</span></button>
           </article>
           <article class="badge-card badge-skills">
-            <span class="badge-doodle" aria-hidden="true">⛺</span>
+            <div class="badge-art badge-art-single" aria-hidden="true"><img src="assets/adventure-skill-badge.png" alt=""></div>
             <p class="badge-label">Learn by doing</p>
             <h3>Adventure Skills</h3>
             <p class="badge-description">Cubs can pick Adventure Skills badges to work on independently, with practice at home. Our meetings help support their progress.</p>
             <button class="open-dialog" type="button" data-dialog="skills-dialog">Our parent explainer <span aria-hidden="true">→</span></button>
           </article>
           <article class="badge-card badge-interest">
-            <span class="badge-doodle" aria-hidden="true">⭐</span>
+            <div class="badge-art badge-art-single" aria-hidden="true"><img src="assets/special-interest-badge.png" alt=""></div>
             <p class="badge-label">Make it your own</p>
             <h3>Special Interest Badges</h3>
             <p class="badge-description">Cubs choose something they enjoy or want to try and make a small project of it.</p>
             <button class="open-dialog" type="button" data-dialog="interest-dialog">Our parent explainer <span aria-hidden="true">→</span></button>
           </article>
+          <article class="badge-card badge-chief-scout">
+            <div class="badge-art badge-art-single" aria-hidden="true"><img src="assets/chief-scout-award-badge.png" alt=""></div>
+            <p class="badge-label">A final-year challenge</p>
+            <h3>Chief Scout Award</h3>
+            <p class="badge-description">A final-year challenge combining personal interests, Adventure Skills, a long hike and an overnight cultural exchange.</p>
+            <button class="open-dialog" type="button" data-dialog="chief-scout-dialog">Our parent explainer <span aria-hidden="true">→</span></button>
+          </article>
         </div>
+        <p class="badge-art-credit">Badge artwork © Scouting Ireland.</p>
       </section>
 
       <section class="section parent-section" id="parent-links" aria-labelledby="parent-title">
@@ -128,13 +165,24 @@
         <form method="dialog" class="dialog-close"><button aria-label="Close">×</button></form>
         <span class="dialog-doodle" aria-hidden="true">🧭</span>
         <p class="eyebrow eyebrow-dark">The Cub journey</p>
-        <h2 id="journey-dialog-title">Personal Progress &amp; Awards</h2>
-        <p>Cubs earn the <strong>Turas, Taisteal</strong> and <strong>Tagann</strong> stage badges as they take part in adventures, try challenges and talk about what they learned. In their final Cub year, they can also work towards the Chief Scout Award.</p>
+        <h2 id="journey-dialog-title">Personal Progress</h2>
+        <p>Cubs earn the <strong>Turas, Taisteal</strong> and <strong>Tagann</strong> stage badges as they take part in adventures, try challenges and talk about what they learned.</p>
         <p class="dialog-aside"><strong>SPICES</strong> is Scouting Ireland’s name for six areas of growth: social, physical, intellectual, character, emotional and spiritual. These are part of the Cub journey, rather than a separate badge to earn.</p>
         <div class="dialog-links">
           <a href="https://scouting360.ie/wp-content/uploads/2026/06/Lands-of-Adventure.pdf" target="_blank" rel="noopener noreferrer">Full Cub journey guide <span aria-hidden="true">↗</span></a>
-          <a href="https://scouting360.ie/wp-content/uploads/2026/06/Chief-Scout-Award-Cub-requirements-20mar2026.pdf" target="_blank" rel="noopener noreferrer">Chief Scout Award details <span aria-hidden="true">↗</span></a>
           <a href="https://scouting360.ie/wp-content/uploads/2025/09/learning-objectives.pdf" target="_blank" rel="noopener noreferrer">More about the SPICES <span aria-hidden="true">↗</span></a>
+        </div>
+      </dialog>
+
+      <dialog class="guide-dialog" id="chief-scout-dialog" aria-labelledby="chief-scout-dialog-title">
+        <form method="dialog" class="dialog-close"><button aria-label="Close">×</button></form>
+        <span class="dialog-doodle" aria-hidden="true">🏅</span>
+        <p class="eyebrow eyebrow-dark">A final-year challenge</p>
+        <h2 id="chief-scout-dialog-title">Chief Scout Award</h2>
+        <p>The award must be started and completed in a Cub’s final year. It takes at least six months and brings together four Special Interest Badges, Adventure Skills (two to Stage 2 and one to Stage 3), a 20 km expedition and a two-day, one-night residential with an intercultural activity.</p>
+        <p class="dialog-aside">A Scouter can help your Cub understand the requirements and plan the challenge at a pace that works for them.</p>
+        <div class="dialog-links">
+          <a href="https://scouting360.ie/wp-content/uploads/2026/06/Chief-Scout-Award-Cub-requirements-20mar2026.pdf" target="_blank" rel="noopener noreferrer">Cub Chief Scout Award requirements <span aria-hidden="true">↗</span></a>
         </div>
       </dialog>
 
@@ -159,7 +207,6 @@
         <p class="dialog-aside">The point is to explore an interest, learn something and have a go. It is about the Cub’s effort and progress, not being an expert.</p>
         <div class="dialog-links">
           <a href="https://scouting360.ie/wp-content/uploads/2026/06/Special-Interest-Badges-Cubs.pdf" target="_blank" rel="noopener noreferrer">Full Cub badge guide <span aria-hidden="true">↗</span></a>
-          <a href="https://scouting360.ie/wp-content/uploads/2025/09/all-special-interest-badges.pdf" target="_blank" rel="noopener noreferrer">More badge ideas <span aria-hidden="true">↗</span></a>
         </div>
       </dialog>
 
@@ -202,5 +249,6 @@
         });
       });
     </script>
+    <script src="calendar.js"></script>
   </body>
 </html>
