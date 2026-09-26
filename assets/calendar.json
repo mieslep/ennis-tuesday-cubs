@@ -23,13 +23,6 @@
     ],
     "overrides": [
       {
-        "date": "2026-09-29",
-        "title": "Weekly meeting — parent needed for first 30 minutes",
-        "shortTitle": "Parent needed first 30 min",
-        "description": "Please have a parent join for the first 30 minutes.",
-        "kind": "meeting-special"
-      },
-      {
         "date": "2026-10-20",
         "title": "Review and Planning",
         "shortTitle": "Review & planning",
@@ -84,6 +77,17 @@
     ]
   },
   "events": [
+    {
+      "startDate": "2026-09-29",
+      "title": "Parent information meeting",
+      "shortTitle": "Parent info",
+      "description": "Information meeting for parents.",
+      "startTime": "18:30",
+      "endTime": "19:00",
+      "timeLabel": "6:30–7:00 pm",
+      "kind": "meeting-special",
+      "keyDate": false
+    },
     {
       "startDate": "2026-10-04",
       "title": "Cub Forum",

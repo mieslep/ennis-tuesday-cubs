@@ -124,6 +124,8 @@ def calendar_events(data, stamp):
             event["title"],
             event["startDate"],
             end_date=event.get("endDate"),
+            start_time=event.get("startTime"),
+            end_time=event.get("endTime"),
             description=event.get("description", ""),
             location=event.get("location", ""),
             status=event.get("status", "CONFIRMED"),
