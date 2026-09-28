@@ -393,6 +393,30 @@ h1 em, .spices-copy h2 em { color: var(--gold); font-style: normal; }
 .dialog-links a { color: #536d3d; font: 18px var(--hand); text-decoration-style: dashed; text-underline-offset: 3px; }
 .dialog-links a:hover { color: var(--orange); }
 
+.forms-section { padding-top: 66px; }
+.forms-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; align-items: stretch; }
+.form-card {
+  min-width: 0;
+  padding: 20px 21px 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  background: var(--paper);
+  border: 2px dashed #a8ae8c;
+  border-radius: 15px 11px 16px 10px;
+  box-shadow: 4px 5px 0 rgba(74, 83, 56, .11);
+}
+.form-card-consent { background: #f0eafa; border-color: #aea1bd; }
+.form-card-medication { background: #edf2df; border-color: #a4b187; }
+.form-icon { font-size: 25px; }
+.form-card h3 { margin: 0 0 6px; color: var(--leaf-dark); font-size: 22px; font-weight: 600; letter-spacing: -.025em; }
+.form-card p { margin: 0; color: #596253; font-size: 12px; line-height: 1.6; }
+.form-actions { display: grid; justify-items: start; gap: 5px; margin-top: auto; padding-top: 4px; }
+.form-download { min-height: 36px; display: inline-flex; align-items: center; gap: 8px; color: var(--leaf-dark); font: 18px/1.25 var(--hand); text-decoration: underline; text-decoration-style: dashed; text-underline-offset: 4px; overflow-wrap: anywhere; }
+.form-download span { flex: 0 0 auto; color: var(--orange); font: 13px var(--body); }
+.form-download:hover { color: var(--orange); }
+
 .site-footer {
   max-width: 1190px;
   min-height: 75px;
@@ -424,6 +448,9 @@ h1 em, .spices-copy h2 em { color: var(--gold); font-style: normal; }
   .badge-card { padding: 17px 15px; }
   .badge-card h3 { font-size: 20px; }
   .badge-description { font-size: 10px; }
+  .forms-grid { gap: 12px; }
+  .form-card { padding: 17px 15px; }
+  .form-card h3 { font-size: 20px; }
   .parent-section { padding-top: 55px; }
   .site-footer { padding-right: 24px; padding-left: 24px; }
 }
@@ -465,6 +492,10 @@ h1 em, .spices-copy h2 em { color: var(--gold); font-style: normal; }
   .badge-grid { grid-template-columns: 1fr; gap: 14px; }
   .badge-card { padding: 20px; transform: none; }
   .badge-description { font-size: 12px; }
+  .forms-section { padding-top: 56px; }
+  .forms-grid { grid-template-columns: 1fr; gap: 13px; }
+  .form-card { padding: 20px; }
+  .form-card h3 { font-size: 22px; }
   .parent-section { padding-top: 50px; }
   .parent-link-list { grid-template-columns: 1fr; }
   .site-footer { min-height: 96px; padding: 18px 20px; flex-wrap: wrap; gap: 8px 15px; }
